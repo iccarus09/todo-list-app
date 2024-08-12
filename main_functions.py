@@ -1,5 +1,7 @@
-FILEPATH = r"C:\Users\amelia\Desktop\Web Dev\pythonProject\Project2\todolist.txt"
-delete_filepath =  r"C:\Users\amelia\Desktop\Web Dev\pythonProject\Project2\deletelist.txt"
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FILEPATH = os.path.join(BASE_DIR, 'todolist.txt')
+delete_filepath = os.path.join(BASE_DIR, 'deletelist.txt')
 
 def get_todos(filepath=FILEPATH):
     with open(filepath, 'r') as file_local:
