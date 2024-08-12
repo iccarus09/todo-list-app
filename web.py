@@ -12,6 +12,7 @@ def add_todo():
 
 st.title("To-do list")
 st.subheader("Newly added items")
+st.caption("_Click to mark as complete_")
 
 for index, item in enumerate(my_list):
     check_box = st.checkbox(item, key=item)
@@ -25,8 +26,9 @@ for index, item in enumerate(my_list):
         st.rerun()
 
 
-st.text_input(label='Enter your todo', placeholder='enter', on_change=add_todo, key='new_todo')
+st.text_input(label='Enter your plan', placeholder='Hiking', on_change=add_todo, key='new_todo')
 
+st.divider()
 st.subheader("Completed items")
 for item in my_deletes:
     st.write(item)
